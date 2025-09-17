@@ -1,13 +1,13 @@
-import { Card } from '@/components/ui/card';
 import { buttonVariants } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { Card } from '@/components/ui/card';
 import { constructMetadata } from '@/lib/metadata';
 import { getUrlWithLocale } from '@/lib/urls/urls';
+import { cn } from '@/lib/utils';
 import { Routes } from '@/routes';
 import type { Metadata } from 'next';
 import type { Locale } from 'next-intl';
-import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
 
 export async function generateMetadata({
   params,
@@ -51,7 +51,9 @@ export default async function ToolsPage() {
 
   return (
     <div className="container mx-auto px-4 py-10 md:py-16">
-      <h1 className="text-3xl md:text-4xl font-bold tracking-tight">{t('title')}</h1>
+      <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
+        {t('title')}
+      </h1>
       <p className="mt-3 text-muted-foreground max-w-3xl">{t('description')}</p>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -59,7 +61,13 @@ export default async function ToolsPage() {
           <Card key={it.title} className="p-6 space-y-2 border bg-card/50">
             <h3 className="font-medium text-lg">{it.title}</h3>
             <p className="text-sm text-muted-foreground">{it.desc}</p>
-            <Link href={it.href} className={cn(buttonVariants({ variant: 'default', size: 'sm' }), 'mt-3')}>
+            <Link
+              href={it.href}
+              className={cn(
+                buttonVariants({ variant: 'default', size: 'sm' }),
+                'mt-3'
+              )}
+            >
               {t('cta')}
             </Link>
           </Card>
@@ -68,4 +76,3 @@ export default async function ToolsPage() {
     </div>
   );
 }
-

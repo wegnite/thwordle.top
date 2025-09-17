@@ -8,6 +8,8 @@ import {
 import AffonsoScript from '@/components/affiliate/affonso';
 import PromotekitScript from '@/components/affiliate/promotekit';
 import { TailwindIndicator } from '@/components/layout/tailwind-indicator';
+import { PerformanceMonitor } from '@/components/performance/PerformanceMonitor';
+import { Preloader } from '@/components/performance/Preloader';
 import { routing } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
 import { type Locale, NextIntlClientProvider, hasLocale } from 'next-intl';
@@ -43,7 +45,12 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html suppressHydrationWarning lang={locale} className="dark" style={{ colorScheme: 'dark' }}>
+    <html
+      suppressHydrationWarning
+      lang={locale}
+      className="dark"
+      style={{ colorScheme: 'dark' }}
+    >
       <head>
         <AffonsoScript />
         <PromotekitScript />
@@ -61,6 +68,9 @@ export default async function LocaleLayout({
         <NuqsAdapter>
           <NextIntlClientProvider>
             <Providers locale={locale}>
+              <Preloader />
+              <PerformanceMonitor />
+
               {children}
 
               <Toaster richColors position="top-right" offset={64} />

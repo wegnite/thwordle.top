@@ -12,17 +12,45 @@ const nextConfig: NextConfig = {
   /* config options here */
   devIndicators: false,
 
+  // 性能优化配置
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
+  },
+
   // https://nextjs.org/docs/architecture/nextjs-compiler#remove-console
   // Remove all console.* calls in production only
   compiler: {
-    // removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: process.env.NODE_ENV === 'production',
   },
 
+  // 启用压缩
+  compress: true,
+
+  // 性能优化
+  poweredByHeader: false,
+
   images: {
-    // https://vercel.com/docs/image-optimization/managing-image-optimization-costs#minimizing-image-optimization-costs
-    // https://nextjs.org/docs/app/api-reference/components/image#unoptimized
-    // vercel has limits on image optimization, 1000 images per month
+    // 启用图像优化以提升性能
     unoptimized: process.env.DISABLE_IMAGE_OPTIMIZATION === 'true',
+
+    // 图像格式优化
+    formats: ['image/webp', 'image/avif'],
+
+    // 设备尺寸配置
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+
+    // 最小化缓存时间
+    minimumCacheTTL: 31536000, // 1年
+
     remotePatterns: [
       {
         protocol: 'https',
@@ -53,6 +81,10 @@ const nextConfig: NextConfig = {
         hostname: 'service.firecrawl.dev',
       },
     ],
+
+    // 懒加载配置
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 };
 

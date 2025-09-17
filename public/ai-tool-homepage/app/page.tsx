@@ -1,7 +1,7 @@
-import { Header } from "@/components/header"
-import { AIToolSection } from "@/components/ai-tool-section"
-import { LandingContent } from "@/components/landing-content"
-import { Footer } from "@/components/footer"
+import { AIToolSection } from '@/components/ai-tool-section';
+import { Footer } from '@/components/footer';
+import { Header } from '@/components/header';
+import { LandingContent } from '@/components/landing-content';
 
 export default function HomePage() {
   return (
@@ -22,5 +22,5 @@ export default function HomePage() {
 
       <Footer />
     </div>
-  )
+  );
 }

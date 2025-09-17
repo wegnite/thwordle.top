@@ -1,12 +1,18 @@
-"use client";
+'use client';
 
-import { useMemo, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Card, CardContent } from '@/components/ui/card';
-import { Upload, Sparkles, ImageIcon } from 'lucide-react';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import { ImageIcon, Sparkles, Upload } from 'lucide-react';
+import { useMemo, useRef, useState } from 'react';
 
 export function SeedreamToolSection() {
   const [prompt, setPrompt] = useState('');
@@ -44,8 +50,8 @@ export function SeedreamToolSection() {
           Turn Your Dreams into Reality
         </h2>
         <p className="text-lg md:text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
-          Seedream 4.0 transforms your imagination into stunning visual art. Upload a reference or start from text to
-          bloom breathtaking images.
+          Seedream 4.0 transforms your imagination into stunning visual art.
+          Upload a reference or start from text to bloom breathtaking images.
         </p>
       </div>
 
@@ -55,7 +61,9 @@ export function SeedreamToolSection() {
           <Card className="p-6 space-y-6">
             {/* Upload first */}
             <div className="space-y-2">
-              <Label className="text-base font-medium">Image Upload (optional)</Label>
+              <Label className="text-base font-medium">
+                Image Upload (optional)
+              </Label>
               <input
                 ref={inputRef}
                 type="file"
@@ -75,14 +83,19 @@ export function SeedreamToolSection() {
                   Upload one or more inspiration images (max 5, PNG/JPG/WebP)
                 </p>
                 {files.length > 0 && (
-                  <p className="mt-2 text-xs text-muted-foreground">{files.length} image(s) selected</p>
+                  <p className="mt-2 text-xs text-muted-foreground">
+                    {files.length} image(s) selected
+                  </p>
                 )}
               </div>
             </div>
 
             {/* Prompt second */}
             <div className="space-y-2">
-              <Label htmlFor="seedream-prompt" className="text-base font-medium">
+              <Label
+                htmlFor="seedream-prompt"
+                className="text-base font-medium"
+              >
                 Describe your dream
               </Label>
               <Input
@@ -92,7 +105,9 @@ export function SeedreamToolSection() {
                 onChange={(e) => setPrompt(e.target.value)}
                 className="h-12"
               />
-              <p className="text-xs text-muted-foreground">If left empty, a high-quality default prompt will be used.</p>
+              <p className="text-xs text-muted-foreground">
+                If left empty, a high-quality default prompt will be used.
+              </p>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
@@ -128,7 +143,11 @@ export function SeedreamToolSection() {
               </div>
             </div>
 
-            <Button size="lg" className="w-full h-12 text-base font-medium" onClick={handleGenerate}>
+            <Button
+              size="lg"
+              className="w-full h-12 text-base font-medium"
+              onClick={handleGenerate}
+            >
               <Sparkles className="h-5 w-5 mr-2" />
               Generate with Seedream 4.0
             </Button>
@@ -141,7 +160,10 @@ export function SeedreamToolSection() {
             <h3 className="text-xl font-semibold mb-4">Your Dream Garden</h3>
             <div className="grid grid-cols-2 gap-4">
               {[1, 2, 3, 4].map((i) => (
-                <Card key={i} className="aspect-square overflow-hidden group cursor-pointer">
+                <Card
+                  key={i}
+                  className="aspect-square overflow-hidden group cursor-pointer"
+                >
                   <CardContent className="p-0 h-full">
                     <div className="h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-secondary/30 transition-all">
                       <ImageIcon className="h-8 w-8 text-muted-foreground" />

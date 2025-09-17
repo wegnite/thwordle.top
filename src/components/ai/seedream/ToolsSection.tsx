@@ -1,9 +1,9 @@
-import { Card } from '@/components/ui/card';
 import { buttonVariants } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import { Routes } from '@/routes';
-import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
 
 export async function ToolsSection() {
   const t = await getTranslations('ToolsPage');
@@ -43,7 +43,13 @@ export async function ToolsSection() {
           <Card key={it.title} className="p-6 space-y-2 border bg-card/50">
             <h3 className="font-medium text-lg">{it.title}</h3>
             <p className="text-sm text-muted-foreground">{it.desc}</p>
-            <Link href={it.href} className={cn(buttonVariants({ variant: 'default', size: 'sm' }), 'mt-3')}>
+            <Link
+              href={it.href}
+              className={cn(
+                buttonVariants({ variant: 'default', size: 'sm' }),
+                'mt-3'
+              )}
+            >
               {t('cta')}
             </Link>
           </Card>
@@ -52,4 +58,3 @@ export async function ToolsSection() {
     </section>
   );
 }
-

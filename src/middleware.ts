@@ -113,20 +113,23 @@ export default async function middleware(req: NextRequest) {
   // Apply intlMiddleware for all routes
   // console.log('<< middleware end, applying intlMiddleware');
   const response = intlMiddleware(req);
-  
+
   // Add security headers for SEO and security
   if (response) {
     response.headers.set('X-Frame-Options', 'DENY');
     response.headers.set('X-Content-Type-Options', 'nosniff');
     response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
     response.headers.set('X-XSS-Protection', '1; mode=block');
-    
+
     // Force HTTPS with Strict Transport Security
     if (process.env.NODE_ENV === 'production') {
-      response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+      response.headers.set(
+        'Strict-Transport-Security',
+        'max-age=31536000; includeSubDomains; preload'
+      );
     }
   }
-  
+
   return response;
 }
 

@@ -32,34 +32,38 @@ import {
  * - CSS and font files are downloaded at build time and self-hosted with the rest of your static assets.
  * https://nextjs.org/docs/app/building-your-application/optimizing/fonts#google-fonts
  */
-// https://fonts.google.com/noto/specimen/Noto+Sans
+// 主要字体 - 用于游戏界面
 export const fontNotoSans = Noto_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-noto-sans',
   weight: ['500', '600', '700'],
+  preload: true, // 预加载主要字体
 });
 
-// https://fonts.google.com/noto/specimen/Noto+Serif
+// 可选字体 - 仅在需要时加载
 export const fontNotoSerif = Noto_Serif({
   subsets: ['latin'],
-  display: 'swap',
+  display: 'optional', // 改为optional，提升首次加载速度
   variable: '--font-noto-serif',
   weight: ['400'],
+  preload: false,
 });
 
-// https://fonts.google.com/noto/specimen/Noto+Sans+Mono
+// 代码字体 - 仅开发页面使用
 export const fontNotoSansMono = Noto_Sans_Mono({
   subsets: ['latin'],
-  display: 'swap',
+  display: 'optional',
   variable: '--font-noto-sans-mono',
   weight: ['400'],
+  preload: false,
 });
 
-// https://fonts.google.com/specimen/Bricolage+Grotesque
+// 装饰字体 - 仅特殊场景使用
 export const fontBricolageGrotesque = Bricolage_Grotesque({
   subsets: ['latin'],
-  display: 'swap',
+  display: 'optional',
   variable: '--font-bricolage-grotesque',
-  weight: ['400', '500', '600', '700'],
+  weight: ['600'], // 减少字重变体
+  preload: false,
 });

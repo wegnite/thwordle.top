@@ -1,17 +1,23 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Card, CardContent } from "@/components/ui/card"
-import { Upload, Sparkles, ImageIcon } from "lucide-react"
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import { ImageIcon, Sparkles, Upload } from 'lucide-react';
+import { useState } from 'react';
 
 export function AIToolSection() {
-  const [prompt, setPrompt] = useState("")
-  const [style, setStyle] = useState("")
-  const [aspectRatio, setAspectRatio] = useState("")
+  const [prompt, setPrompt] = useState('');
+  const [style, setStyle] = useState('');
+  const [aspectRatio, setAspectRatio] = useState('');
 
   return (
     <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -22,8 +28,9 @@ export function AIToolSection() {
             Turn Your Dreams into Reality
           </h1>
           <p className="text-xl text-muted-foreground text-pretty">
-            Seedream transforms your wildest imagination into stunning visual art. Plant a seed of an idea and watch it
-            bloom into breathtaking images.
+            Seedream transforms your wildest imagination into stunning visual
+            art. Plant a seed of an idea and watch it bloom into breathtaking
+            images.
           </p>
         </div>
 
@@ -77,7 +84,9 @@ export function AIToolSection() {
           <div className="space-y-4">
             <div className="border-2 border-dashed border-border rounded-lg p-8 text-center hover:border-primary/50 transition-colors cursor-pointer">
               <Upload className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
-              <p className="text-sm text-muted-foreground">Upload an inspiration image (optional)</p>
+              <p className="text-sm text-muted-foreground">
+                Upload an inspiration image (optional)
+              </p>
             </div>
 
             <Button size="lg" className="w-full h-12 text-base font-medium">
@@ -94,7 +103,10 @@ export function AIToolSection() {
           <h3 className="text-xl font-semibold mb-4">Your Dream Garden</h3>
           <div className="grid grid-cols-2 gap-4">
             {[1, 2, 3, 4].map((i) => (
-              <Card key={i} className="aspect-square overflow-hidden group cursor-pointer">
+              <Card
+                key={i}
+                className="aspect-square overflow-hidden group cursor-pointer"
+              >
                 <CardContent className="p-0 h-full">
                   <div className="h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-secondary/30 transition-all">
                     <ImageIcon className="h-8 w-8 text-muted-foreground" />
@@ -116,5 +128,5 @@ export function AIToolSection() {
         </Card>
       </div>
     </div>
-  )
+  );
 }

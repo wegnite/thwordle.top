@@ -78,8 +78,7 @@
    * Note: Use secrets to store sensitive data.
    * https://developers.cloudflare.com/workers/configuration/secrets/
    */
-  "kv_namespaces": []
-  ,
+  "kv_namespaces": [],
   /**
    * R2 Buckets (required when using r2-incremental-cache)
    * Create an R2 bucket in the dashboard first, then bind it here.

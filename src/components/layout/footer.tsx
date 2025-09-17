@@ -100,20 +100,20 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
 
             {/* Legal Links */}
             <div className="flex flex-wrap items-center gap-4 text-sm">
-              <LocaleLink 
-                href="/privacy-policy" 
+              <LocaleLink
+                href="/privacy-policy"
                 className="text-muted-foreground hover:text-primary"
               >
                 {t('Marketing.footer.legal.items.privacyPolicy')}
               </LocaleLink>
-              <LocaleLink 
-                href="/terms-of-service" 
+              <LocaleLink
+                href="/terms-of-service"
                 className="text-muted-foreground hover:text-primary"
               >
                 {t('Marketing.footer.legal.items.termsOfService')}
               </LocaleLink>
-              <LocaleLink 
-                href="/cookie-policy" 
+              <LocaleLink
+                href="/cookie-policy"
                 className="text-muted-foreground hover:text-primary"
               >
                 {t('Marketing.footer.legal.items.cookiePolicy')}

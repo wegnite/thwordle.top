@@ -4,7 +4,7 @@ import Script from 'next/script';
 
 /**
  * Google AdSense
- * 
+ *
  * https://www.google.com/adsense/
  * Auto ads component for Google AdSense
  */

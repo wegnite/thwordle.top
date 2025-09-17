@@ -4,7 +4,8 @@ import type { Locale } from 'next-intl';
 const baseUrl =
   process.env.NODE_ENV === 'production'
     ? 'https://thwordle.top' // 生产环境写死域名
-    : process.env.NEXT_PUBLIC_BASE_URL ?? `http://localhost:${process.env.PORT ?? 3000}`;
+    : (process.env.NEXT_PUBLIC_BASE_URL ??
+      `http://localhost:${process.env.PORT ?? 3000}`);
 
 /**
  * Get the base URL of the application

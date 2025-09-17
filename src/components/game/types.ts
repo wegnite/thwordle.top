@@ -34,23 +34,23 @@ export type RoundIndex = 0 | 1 | 2 | 3 | 4 | 5;
 /**
  * 单个瓷砖（字母格子）的状态
  */
-export type TileState = 
-  | 'empty'      // 空白状态
-  | 'filled'     // 已填充但未评估
-  | 'correct'    // 正确位置的正确字母
-  | 'present'    // 包含在单词中但位置错误的字母
-  | 'absent';    // 不包含在单词中的字母
+export type TileState =
+  | 'empty' // 空白状态
+  | 'filled' // 已填充但未评估
+  | 'correct' // 正确位置的正确字母
+  | 'present' // 包含在单词中但位置错误的字母
+  | 'absent'; // 不包含在单词中的字母
 
 /**
  * 瓷砖动画状态
  */
-export type TileAnimationState = 
-  | 'idle'       // 无动画
-  | 'pop'        // 弹出动画（输入字母时）
-  | 'flip'       // 翻转动画（评估结果时）
-  | 'bounce'     // 弹跳动画（游戏胜利时）
-  | 'shake'      // 摇摆动画（无效单词时）
-  | 'pulse';     // 脉冲动画（提示时）
+export type TileAnimationState =
+  | 'idle' // 无动画
+  | 'pop' // 弹出动画（输入字母时）
+  | 'flip' // 翻转动画（评估结果时）
+  | 'bounce' // 弹跳动画（游戏胜利时）
+  | 'shake' // 摇摆动画（无效单词时）
+  | 'pulse'; // 脉冲动画（提示时）
 
 /**
  * 单个瓷砖的完整定义
@@ -99,30 +99,30 @@ export interface BoardDimensions {
 /**
  * 游戏进行状态
  */
-export type GameStatus = 
-  | 'playing'    // 游戏进行中
-  | 'won'        // 游戏胜利
-  | 'lost'       // 游戏失败
-  | 'loading'    // 加载中
-  | 'error';     // 错误状态
+export type GameStatus =
+  | 'playing' // 游戏进行中
+  | 'won' // 游戏胜利
+  | 'lost' // 游戏失败
+  | 'loading' // 加载中
+  | 'error'; // 错误状态
 
 /**
  * 游戏难度等级
  */
-export type DifficultyLevel = 
-  | 'easy'       // 简单（4字母）
-  | 'normal'     // 普通（5字母）
-  | 'hard'       // 困难（6字母）
-  | 'expert';    // 专家（7字母）
+export type DifficultyLevel =
+  | 'easy' // 简单（4字母）
+  | 'normal' // 普通（5字母）
+  | 'hard' // 困难（6字母）
+  | 'expert'; // 专家（7字母）
 
 /**
  * 游戏模式
  */
-export type GameMode = 
-  | 'daily'      // 每日挑战
-  | 'practice'   // 练习模式
-  | 'themed'     // 主题模式
-  | 'custom';    // 自定义模式
+export type GameMode =
+  | 'daily' // 每日挑战
+  | 'practice' // 练习模式
+  | 'themed' // 主题模式
+  | 'custom'; // 自定义模式
 
 // =========================
 // 主题系统类型
@@ -131,23 +131,23 @@ export type GameMode =
 /**
  * 游戏主题标识符
  */
-export type ThemeId = 
-  | 'default'           // 默认主题
-  | 'harry-potter'      // 哈利波特主题
-  | 'lord-of-rings'     // 指环王主题
-  | 'greek-mythology'   // 希腊神话主题
-  | 'star-wars'         // 星球大战主题
-  | 'disney'            // 迪士尼主题
-  | 'marvel'            // 漫威主题
-  | 'pokemon'           // 宝可梦主题
-  | 'anime'             // 动漫主题
-  | 'food'              // 美食主题
-  | 'animals'           // 动物主题
-  | 'countries'         // 国家主题
-  | 'science'           // 科学主题
-  | 'history'           // 历史主题
-  | 'music'             // 音乐主题
-  | 'sports';           // 体育主题
+export type ThemeId =
+  | 'default' // 默认主题
+  | 'harry-potter' // 哈利波特主题
+  | 'lord-of-rings' // 指环王主题
+  | 'greek-mythology' // 希腊神话主题
+  | 'star-wars' // 星球大战主题
+  | 'disney' // 迪士尼主题
+  | 'marvel' // 漫威主题
+  | 'pokemon' // 宝可梦主题
+  | 'anime' // 动漫主题
+  | 'food' // 美食主题
+  | 'animals' // 动物主题
+  | 'countries' // 国家主题
+  | 'science' // 科学主题
+  | 'history' // 历史主题
+  | 'music' // 音乐主题
+  | 'sports'; // 体育主题
 
 /**
  * 主题配置信息
@@ -196,20 +196,20 @@ export interface GameTheme {
 /**
  * 键盘按键类型
  */
-export type KeyboardKeyType = 
-  | 'letter'     // 字母键
-  | 'enter'      // 确认键
+export type KeyboardKeyType =
+  | 'letter' // 字母键
+  | 'enter' // 确认键
   | 'backspace'; // 删除键
 
 /**
  * 键盘按键状态
  */
-export type KeyboardKeyState = 
-  | 'default'    // 默认状态
-  | 'correct'    // 正确（绿色）
-  | 'present'    // 包含（黄色）
-  | 'absent'     // 不包含（灰色）
-  | 'disabled';  // 禁用状态
+export type KeyboardKeyState =
+  | 'default' // 默认状态
+  | 'correct' // 正确（绿色）
+  | 'present' // 包含（黄色）
+  | 'absent' // 不包含（灰色）
+  | 'disabled'; // 禁用状态
 
 /**
  * 键盘按键定义
@@ -244,11 +244,11 @@ export type KeyboardLayout = KeyboardRow[];
 /**
  * 用户输入事件类型
  */
-export type UserInputType = 
-  | 'key_press'      // 按键输入
-  | 'virtual_key'    // 虚拟键盘输入
-  | 'touch'          // 触摸输入
-  | 'mouse_click';   // 鼠标点击
+export type UserInputType =
+  | 'key_press' // 按键输入
+  | 'virtual_key' // 虚拟键盘输入
+  | 'touch' // 触摸输入
+  | 'mouse_click'; // 鼠标点击
 
 /**
  * 用户输入事件
@@ -453,16 +453,16 @@ export interface GameState {
 /**
  * 动画类型
  */
-export type AnimationType = 
-  | 'tile_flip'          // 瓷砖翻转
-  | 'tile_pop'           // 瓷砖弹出
-  | 'tile_bounce'        // 瓷砖弹跳
-  | 'row_shake'          // 行摇摆
-  | 'board_celebration'  // 游戏板庆祝
-  | 'keyboard_press'     // 键盘按键
-  | 'theme_transition'   // 主题切换
-  | 'modal_slide'        // 模态框滑动
-  | 'loading_spinner';   // 加载旋转
+export type AnimationType =
+  | 'tile_flip' // 瓷砖翻转
+  | 'tile_pop' // 瓷砖弹出
+  | 'tile_bounce' // 瓷砖弹跳
+  | 'row_shake' // 行摇摆
+  | 'board_celebration' // 游戏板庆祝
+  | 'keyboard_press' // 键盘按键
+  | 'theme_transition' // 主题切换
+  | 'modal_slide' // 模态框滑动
+  | 'loading_spinner'; // 加载旋转
 
 /**
  * 动画配置
@@ -489,17 +489,17 @@ export interface AnimationConfig {
 /**
  * 游戏事件类型
  */
-export type GameEventType = 
-  | 'game_start'         // 游戏开始
-  | 'game_end'           // 游戏结束
-  | 'guess_submit'       // 提交猜测
-  | 'word_complete'      // 完成单词
-  | 'key_press'          // 按键事件
-  | 'theme_change'       // 主题切换
-  | 'settings_change'    // 设置改变
-  | 'hint_used'          // 使用提示
+export type GameEventType =
+  | 'game_start' // 游戏开始
+  | 'game_end' // 游戏结束
+  | 'guess_submit' // 提交猜测
+  | 'word_complete' // 完成单词
+  | 'key_press' // 按键事件
+  | 'theme_change' // 主题切换
+  | 'settings_change' // 设置改变
+  | 'hint_used' // 使用提示
   | 'achievement_unlock' // 成就解锁
-  | 'error_occurred';    // 错误发生
+  | 'error_occurred'; // 错误发生
 
 /**
  * 游戏事件数据
@@ -527,17 +527,17 @@ export type GameEventListener = (event: GameEvent) => void;
 /**
  * 游戏错误类型
  */
-export type GameErrorType = 
-  | 'invalid_word'       // 无效单词
-  | 'word_too_short'     // 单词太短
-  | 'word_too_long'      // 单词太长
-  | 'word_not_found'     // 单词未找到
-  | 'game_not_active'    // 游戏未激活
-  | 'network_error'      // 网络错误
-  | 'storage_error'      // 存储错误
-  | 'theme_load_error'   // 主题加载错误
-  | 'invalid_input'      // 无效输入
-  | 'timeout_error';     // 超时错误
+export type GameErrorType =
+  | 'invalid_word' // 无效单词
+  | 'word_too_short' // 单词太短
+  | 'word_too_long' // 单词太长
+  | 'word_not_found' // 单词未找到
+  | 'game_not_active' // 游戏未激活
+  | 'network_error' // 网络错误
+  | 'storage_error' // 存储错误
+  | 'theme_load_error' // 主题加载错误
+  | 'invalid_input' // 无效输入
+  | 'timeout_error'; // 超时错误
 
 /**
  * 游戏错误信息
@@ -564,17 +564,17 @@ export interface GameError {
 /**
  * 成就类型
  */
-export type AchievementType = 
-  | 'first_win'          // 首次胜利
-  | 'streak_master'      // 连胜大师
-  | 'speed_demon'        // 速度恶魔
-  | 'theme_collector'    // 主题收集者
-  | 'daily_warrior'      // 每日战士
-  | 'perfect_game'       // 完美游戏
-  | 'comeback_king'      // 逆转之王
-  | 'explorer'           // 探索者
-  | 'dedication'         // 奉献精神
-  | 'master_solver';     // 解谜大师
+export type AchievementType =
+  | 'first_win' // 首次胜利
+  | 'streak_master' // 连胜大师
+  | 'speed_demon' // 速度恶魔
+  | 'theme_collector' // 主题收集者
+  | 'daily_warrior' // 每日战士
+  | 'perfect_game' // 完美游戏
+  | 'comeback_king' // 逆转之王
+  | 'explorer' // 探索者
+  | 'dedication' // 奉献精神
+  | 'master_solver'; // 解谜大师
 
 /**
  * 成就定义

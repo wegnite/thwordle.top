@@ -39,6 +39,11 @@ export function getNavbarLinks(): NestedMenuItem[] {
       external: false,
     },
     {
+      title: 'Play Thirdle',
+      href: '/thirdle',
+      external: false,
+    },
+    {
       title: 'How to Play',
       href: '/#how-to-play',
       external: false,

@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export function Header() {
   return (
@@ -13,10 +13,16 @@ export function Header() {
         </div>
 
         <nav className="hidden md:flex items-center space-x-6">
-          <Link href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link
+            href="#features"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
             Features
           </Link>
-          <Link href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link
+            href="#pricing"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
             Pricing
           </Link>
         </nav>
@@ -29,5 +35,5 @@ export function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }
