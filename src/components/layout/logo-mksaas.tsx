@@ -7,9 +7,11 @@ export function MkSaaSLogo({ className }: { className?: string }) {
       src="/mksaas.png"
       alt="Logo of MkSaaS"
       title="Logo of MkSaaS"
-      width={96}
-      height={96}
+      width={32}
+      height={32}
+      sizes="32px"
       className={cn('size-8 rounded-md', className)}
+      loading="lazy"
     />
   );
 }

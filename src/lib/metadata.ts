@@ -12,25 +12,35 @@ export function constructMetadata({
   canonicalUrl,
   image,
   noIndex = false,
+  alternates,
 }: {
   title?: string;
   description?: string;
   canonicalUrl?: string;
   image?: string;
   noIndex?: boolean;
+  alternates?: Metadata['alternates'];
 } = {}): Metadata {
   title = title || defaultMessages.Metadata.title;
   description = description || defaultMessages.Metadata.description;
   image = image || websiteConfig.metadata.images?.ogImage;
   const ogImageUrl = getImageUrl(image || '');
+  const canonicalAlternate = canonicalUrl
+    ? { canonical: canonicalUrl }
+    : undefined;
+  const mergedAlternates =
+    canonicalAlternate || alternates
+      ? {
+          ...(alternates ?? {}),
+          ...(canonicalAlternate && !alternates?.canonical
+            ? canonicalAlternate
+            : {}),
+        }
+      : undefined;
   return {
     title,
     description,
-    alternates: canonicalUrl
-      ? {
-          canonical: canonicalUrl,
-        }
-      : undefined,
+    alternates: mergedAlternates,
     openGraph: {
       type: 'website',
       locale: 'en_US',

@@ -176,6 +176,118 @@
       "messageMaxLength": "消息必须不超过 500 个字符"
     }
   },
+  "ThirdlePage": {
+    "metaTitle": "Thirdle 小型十字字谜游戏在线版 | Thwordle",
+    "metaDescription": "体验 Thirdle，每日极速十字字谜挑战。利用绿色、橙色、紫色与黑色提示，在六次尝试内完成谜题，并提供免费无限练习模式。",
+    "hero": {
+      "title": "Thirdle",
+      "subtitle": "每日迷你十字字谜游戏",
+      "intro": "加入全球 Thirdle 玩家，用颜色提示破解短小精悍的十字字谜。开局就有两个字母到位，用六次以内完成整盘。",
+      "ctaHeading": "准备好开始 Thirdle 了吗？",
+      "ctaDescription": "在新标签页打开 Thirdle，挑战今日谜题或通过无限练习模式热身。",
+      "ctaButton": "立即游玩 Thirdle",
+      "ctaNote": "将在 thirdle.org 新标签页中打开"
+    },
+    "howTo": {
+      "title": "玩法步骤",
+      "description": "读懂棋盘线索、规划输入顺序，并依据颜色反馈不断微调策略。",
+      "steps": [
+        {
+          "title": "先观察起始字母",
+          "description": "每局都会预先填入两个字母，为首次落子提供方向。"
+        },
+        {
+          "title": "按行输入猜测词",
+          "description": "逐行输入符合十字字谜结构的单词，专注于当前行。"
+        },
+        {
+          "title": "依据颜色调整",
+          "description": "根据绿色、橙色、紫色与黑色反馈，在六次内完成整盘。"
+        }
+      ]
+    },
+    "colorHints": {
+      "title": "颜色提示体系",
+      "items": [
+        {
+          "icon": "🟩",
+          "label": "绿色",
+          "description": "词语正确且位置完全正确。"
+        },
+        {
+          "icon": "🟠",
+          "label": "橙色",
+          "description": "词语正确但位置需要调整。"
+        },
+        {
+          "icon": "🟣",
+          "label": "紫色",
+          "description": "字母属于其他单词的格子。"
+        },
+        {
+          "icon": "⚫",
+          "label": "黑色",
+          "description": "该字母不会出现在本局谜题中。"
+        }
+      ]
+    },
+    "features": {
+      "title": "Thirdle 的亮点",
+      "items": [
+        {
+          "icon": "🧩",
+          "title": "每日新题",
+          "description": "每天刷新一局迷你十字字谜。"
+        },
+        {
+          "icon": "🎨",
+          "title": "清晰反馈",
+          "description": "颜色提示帮助你校准每一步。"
+        },
+        {
+          "icon": "🏆",
+          "title": "六步挑战",
+          "description": "在六次思考内完成整盘字谜。"
+        },
+        {
+          "icon": "♾️",
+          "title": "无限练习",
+          "description": "无限练习盘随时巩固手感。"
+        }
+      ]
+    },
+    "faq": {
+      "title": "常见问题",
+      "items": [
+        {
+          "question": "每天可以玩几局 Thirdle？",
+          "answer": "每天都会推出新的日常挑战，同时提供无限练习盘，让你在完成日常任务后继续解谜。"
+        },
+        {
+          "question": "游玩需要注册账号吗？",
+          "answer": "无需注册即可开始，Thirdle 可直接在桌面或手机浏览器中运行。"
+        },
+        {
+          "question": "Thirdle 与 Wordle 有何不同？",
+          "answer": "Thirdle 不是猜单词，而是解迷你十字字谜，需要利用多种颜色提示判断每个词和字母的位置。"
+        }
+      ]
+    },
+    "screenReader": {
+      "heading": "Thirdle - 每日迷你十字字谜游戏",
+      "intro": "体验 Thirdle，每日迷你十字字谜结合颜色反馈。开局自带两个字母，六次以内解出整盘。",
+      "howToHeading": "Thirdle 玩法说明",
+      "howToIntro": "每局都会先给出两个正确字母，帮助你规划接下来的组合。",
+      "colorHeading": "颜色提示体系",
+      "whyHeading": "为什么要玩 Thirdle？",
+      "whyBody": "Thirdle 将十字字谜的推理与快节奏挑战结合，适合喜爱动脑的词汇游戏玩家。"
+    },
+    "schema": {
+      "howToName": "完成一局 Thirdle 十字字谜",
+      "howToDescription": "利用起始字母与颜色提示，在六次尝试内解出 Thirdle。",
+      "faqDescription": "解答关于在线游玩 Thirdle 的常见问题。"
+    }
+  },
   "WaitlistPage": {
     "title": "等待队列",
     "description": "加入等待队列，及时获取最新消息和更新",

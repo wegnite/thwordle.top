@@ -132,6 +132,103 @@ export default async function HomePage(props: HomePageProps) {
       <div className="container mx-auto px-4 py-8">
         {/* 原版游戏组件 */}
         <ThwordleGame />
+
+        {/* Video Gallery Section */}
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Watch Thwordle in Action
+          </h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Discover how to master Thwordle with gameplay videos, tutorials, and
+            tips from the community!
+          </p>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {/* YouTube Video 1 - Thwordle Basics */}
+            <div className="bg-card border rounded-lg p-4">
+              <div className="aspect-video mb-4">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Thwordle Tutorial - How to Play"
+                  style={{ border: 0 }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full rounded-lg"
+                />
+              </div>
+              <h3 className="font-semibold mb-2">
+                Thwordle Tutorial - How to Play
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Complete beginner's guide to playing Thwordle with all the
+                essential tips and strategies.
+              </p>
+            </div>
+
+            {/* YouTube Video 2 - Harry Potter Theme */}
+            <div className="bg-card border rounded-lg p-4">
+              <div className="aspect-video mb-4">
+                <iframe
+                  src="https://www.youtube.com/embed/oHg5SJYRHA0"
+                  title="Harry Potter Thwordle Challenge"
+                  style={{ border: 0 }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full rounded-lg"
+                />
+              </div>
+              <h3 className="font-semibold mb-2">
+                Harry Potter Theme Challenge
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Watch as we tackle the magical Harry Potter themed Thwordle
+                puzzle with spells and wizarding terms!
+              </p>
+            </div>
+
+            {/* YouTube Video 3 - Pro Tips */}
+            <div className="bg-card border rounded-lg p-4">
+              <div className="aspect-video mb-4">
+                <iframe
+                  src="https://www.youtube.com/embed/L_jWHffIx5E"
+                  title="5 Pro Tips for Thwordle Success"
+                  style={{ border: 0 }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full rounded-lg"
+                />
+              </div>
+              <h3 className="font-semibold mb-2">5 Pro Tips for Success</h3>
+              <p className="text-sm text-muted-foreground">
+                Advanced strategies and insider tips that will dramatically
+                improve your Thwordle solving skills.
+              </p>
+            </div>
+          </div>
+
+          {/* More Videos Button */}
+          <div className="text-center mt-12">
+            <a
+              href="/thirdle"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polygon points="5,3 19,12 5,21" />
+              </svg>
+              Watch More Videos
+            </a>
+          </div>
+        </div>
       </div>
     </>
   );

@@ -176,6 +176,118 @@
       "messageMaxLength": "Message must not exceed 500 characters"
     }
   },
+  "ThirdlePage": {
+    "metaTitle": "Thirdle - Daily Mini Crossword Game Online | Thwordle",
+    "metaDescription": "Play Thirdle, the fast mini crossword challenge. Solve daily grids in six attempts using green, orange, purple, and black hints. Free unlimited practice included.",
+    "hero": {
+      "title": "Thirdle",
+      "subtitle": "Daily Mini Crossword Puzzle Game",
+      "intro": "Join daily Thirdle players solving bite-sized crosswords with color-coded hints. Start with two letters already placed and finish the grid in six bold guesses.",
+      "ctaHeading": "Ready to Play Thirdle?",
+      "ctaDescription": "Open Thirdle in a new tab to tackle today's daily mini crossword or warm up with unlimited practice boards.",
+      "ctaButton": "Play Thirdle",
+      "ctaNote": "Opens in a new tab at thirdle.org"
+    },
+    "howTo": {
+      "title": "How to Play",
+      "description": "Master each Thirdle by reading the grid, planning your guesses, and trusting the color feedback system.",
+      "steps": [
+        {
+          "title": "Review the starter letters",
+          "description": "Each puzzle begins with two letters already on the board to guide your first move."
+        },
+        {
+          "title": "Type focused guesses",
+          "description": "Enter words that match the crossword pattern, filling one row at a time."
+        },
+        {
+          "title": "Use colors wisely",
+          "description": "Adjust every attempt based on the green, orange, purple, and black feedback to solve the grid within six turns."
+        }
+      ]
+    },
+    "colorHints": {
+      "title": "Color Hint System",
+      "items": [
+        {
+          "icon": "🟩",
+          "label": "Green",
+          "description": "Correct word placed in the correct slot."
+        },
+        {
+          "icon": "🟠",
+          "label": "Orange",
+          "description": "Correct word but it belongs in a different position."
+        },
+        {
+          "icon": "🟣",
+          "label": "Purple",
+          "description": "Letter appears elsewhere in the crossword grid."
+        },
+        {
+          "icon": "⚫",
+          "label": "Black",
+          "description": "Letter is not used anywhere in the puzzle."
+        }
+      ]
+    },
+    "features": {
+      "title": "Why Players Love Thirdle",
+      "items": [
+        {
+          "icon": "🧩",
+          "title": "Daily Puzzles",
+          "description": "Fresh mini crossword unlocked every 24 hours."
+        },
+        {
+          "icon": "🎨",
+          "title": "Guided Feedback",
+          "description": "Color system keeps each guess on track."
+        },
+        {
+          "icon": "🏆",
+          "title": "Six-Turn Challenge",
+          "description": "Beat the crossword within six thoughtful attempts."
+        },
+        {
+          "icon": "♾️",
+          "title": "Unlimited Practice",
+          "description": "Warm up with endless archived boards."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Thirdle FAQ",
+      "items": [
+        {
+          "question": "How many Thirdle puzzles can I play each day?",
+          "answer": "You get one brand-new daily challenge plus unlimited practice boards so you can keep solving after the daily puzzle."
+        },
+        {
+          "question": "Do I need to create an account?",
+          "answer": "No account is required. Thirdle launches instantly in any desktop or mobile browser."
+        },
+        {
+          "question": "What makes Thirdle different from Wordle?",
+          "answer": "Instead of guessing a single word, you complete a mini crossword using multi-color hints that show where each word and letter belongs."
+        }
+      ]
+    },
+    "screenReader": {
+      "heading": "Thirdle - Daily Mini Crossword Puzzle Game",
+      "intro": "Play Thirdle, the quick daily mini crossword with smart color hints. Start with two letters already placed and finish the grid in six attempts.",
+      "howToHeading": "How to Play Thirdle",
+      "howToIntro": "You begin every puzzle with two correct letters that help you plan the remaining words.",
+      "colorHeading": "Color Hint System",
+      "whyHeading": "Why Play Thirdle?",
+      "whyBody": "Thirdle blends crossword logic with quick daily challenges, perfect for players who love strategic word games."
+    },
+    "schema": {
+      "howToName": "Solve a Thirdle puzzle",
+      "howToDescription": "Use color hints and starter letters to complete the Thirdle crossword in six moves.",
+      "faqDescription": "Answers to the most common questions about playing Thirdle online."
+    }
+  },
   "WaitlistPage": {
     "title": "Waitlist",
     "description": "Join our waitlist for the launch of our product",

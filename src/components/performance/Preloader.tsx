@@ -17,9 +17,11 @@ export function Preloader({ resources = [] }: PreloaderProps) {
   );
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const addedLinks: HTMLLinkElement[] = [];
 
-    criticalResources.forEach((resource) => {
+    const appendLink = (resource: string) => {
       const link = document.createElement('link');
       link.rel = 'preload';
 
@@ -27,35 +29,45 @@ export function Preloader({ resources = [] }: PreloaderProps) {
         link.as = 'style';
       } else if (resource.endsWith('.js')) {
         link.as = 'script';
-      } else if (resource.match(/\.(jpg|jpeg|png|webp|svg)$/)) {
-        link.as = 'image';
-      } else if (resource.endsWith('.ico')) {
+      } else if (
+        resource.match(/\.(jpg|jpeg|png|webp|svg)$/) ||
+        resource.endsWith('.ico')
+      ) {
         link.as = 'image';
       }
 
       link.href = resource;
       document.head.appendChild(link);
       addedLinks.push(link);
+    };
+
+    const schedule = (cb: () => void) => {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(cb, { timeout: 1500 });
+      } else {
+        setTimeout(cb, 0);
+      }
+    };
+
+    schedule(() => {
+      criticalResources.forEach(appendLink);
+
+      const preconnectDomains = [
+        'https://fonts.googleapis.com',
+        'https://fonts.gstatic.com',
+      ];
+
+      preconnectDomains.forEach((domain) => {
+        const link = document.createElement('link');
+        link.rel = 'preconnect';
+        link.href = domain;
+        link.crossOrigin = 'anonymous';
+        document.head.appendChild(link);
+        addedLinks.push(link);
+      });
     });
 
-    // DNS预连接到常用域名
-    const preconnectDomains = [
-      'https://fonts.googleapis.com',
-      'https://fonts.gstatic.com',
-    ];
-
-    preconnectDomains.forEach((domain) => {
-      const link = document.createElement('link');
-      link.rel = 'preconnect';
-      link.href = domain;
-      link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-      addedLinks.push(link);
-    });
-
-    // 清理函数
     return () => {
-      // 移除所有动态添加的链接
       addedLinks.forEach((link) => {
         if (link.parentNode) {
           link.parentNode.removeChild(link);
